@@ -1,9 +1,12 @@
 name: consumer
 on: [workflow_dispatch]
+permissions:
+  contents: write
 jobs:
   test:
     runs-on: ubuntu-latest
     env:
       DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
     steps:
+      - uses: actions/checkout@v4
       - uses: thomasito-bac-org/chain-trusted-action@v1

@@ -3,5 +3,7 @@ on: [workflow_dispatch]
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
     steps:
       - uses: thomasito-bac-org/chain-trusted-action@v1

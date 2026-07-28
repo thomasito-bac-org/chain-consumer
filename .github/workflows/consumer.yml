@@ -1,0 +1,7 @@
+name: consumer
+on: [workflow_dispatch]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: thomasito-bac-org/chain-trusted-action@v1
